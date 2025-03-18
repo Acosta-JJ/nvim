@@ -10,7 +10,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "tsserver", "yamlls", "gopls", "terraformls", "nil_ls" }
+        ensure_installed = { "lua_ls","yamlls", "terraformls" }
       })
     end
   },
@@ -19,12 +19,10 @@ return {
     lazy = false,
     config = function()
       local lspconfig = require("lspconfig")
-      lspconfig.tsserver.setup({})
       lspconfig.lua_ls.setup({})
       lspconfig.yamlls.setup({})
       lspconfig.gopls.setup({})
       lspconfig.terraformls.setup({})
-      lspconfig.nil_ls.setup({})
 
       vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
       vim.keymap.set('n', '<leader>gv', vim.lsp.buf.definition, {})
