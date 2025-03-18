@@ -33,3 +33,5 @@ vim.opt.colorcolumn = ""
 vim.g.mapleader = " "
 vim.keymap.set('n', '<leader>qq', ':qa<CR>', {})
 vim.keymap.set('n', '<C-s>', ':w<CR>', {})
+vim.opt.clipboard = 'unnamedplus'
+
